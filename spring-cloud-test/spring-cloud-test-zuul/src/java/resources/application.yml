@@ -1,0 +1,21 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: spring-cloud-test-zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /feign/**
+      serviceId: spring-cloud-test-feign
+    api-b:
+      path: /ribbon/**
+      serviceId: spring-cloud-test-ribbon
