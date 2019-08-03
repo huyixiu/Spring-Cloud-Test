@@ -26,6 +26,7 @@
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
+    <!--Spring Cloud -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
