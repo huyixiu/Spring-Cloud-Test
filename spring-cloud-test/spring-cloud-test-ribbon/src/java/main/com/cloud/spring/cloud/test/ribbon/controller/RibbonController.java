@@ -20,7 +20,7 @@ public class RibbonController {
     @Autowired
     private RibbonServices ribbonServices;
 
-    @RequestMapping(value = "hi",method = RequestMethod.GET)
+    @RequestMapping(value = "/hi",method = RequestMethod.GET)
     public String sayHi(@RequestParam String  message){
         return ribbonServices.sayHi(message);
     }
